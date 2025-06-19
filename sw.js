@@ -16,7 +16,11 @@ const urlsToCache = [
   'assets/fig_pensionistin.svg',
   'assets/icon_richtig.svg',
   'assets/icon_falsch.svg',
-  'assets/icon_fakten.svg'
+  'assets/icon_fakten.svg',
+  'assets/icon_fragezeichen.svg',
+  'assets/icon_party.svg',
+  'assets/icon_confetti.svg',
+  'assets/icon_dance.svg'
 ];
 
 self.addEventListener('install', event => {

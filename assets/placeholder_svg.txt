@@ -10,6 +10,9 @@ Placeholder für SVG-Assets:
 - icon_richtig.svg
 - icon_fragezeichen.svg
 - icon_fakten.svg
+- icon_party.svg
+- icon_confetti.svg
+- icon_dance.svg
 - frame_schlagzeile.png
 - bg_spielbrett.jpg
 - btn_antwort_*.svg
