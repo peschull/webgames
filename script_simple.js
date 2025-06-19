@@ -42,7 +42,7 @@ function showQuestion() {
     <div class="options">
       ${q.options.map((opt, idx) => `
         <button class="option-btn" onclick="handleAnswer(${idx}, ${opt.isCorrect})">
-          <img src="/assets/${opt.image}" alt="${opt.label}">
+          <img src="assets/${opt.image}" alt="${opt.label}">
           <span class="option-label">${opt.label}</span>
         </button>
       `).join('')}
@@ -64,12 +64,12 @@ function handleAnswer(optionIndex, isCorrect) {
   
   if (isCorrect) {
     selectedBtn.classList.add('correct');
-    selectedBtn.innerHTML += '<img src="/assets/icon_richtig.svg" class="result-icon" alt="Richtig">';
+    selectedBtn.innerHTML += '<img src="assets/icon_richtig.svg" class="result-icon" alt="Richtig">';
     score++;
     localStorage.setItem('suendenbock_score', score);
   } else {
     selectedBtn.classList.add('wrong');
-    selectedBtn.innerHTML += '<img src="/assets/icon_falsch.svg" class="result-icon" alt="Falsch">';
+    selectedBtn.innerHTML += '<img src="assets/icon_falsch.svg" class="result-icon" alt="Falsch">';
   }
   
   setTimeout(() => showFact(), 600);

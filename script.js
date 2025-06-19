@@ -143,7 +143,7 @@ class SuendenbockGame {
                   aria-label="Option ${idx + 1}: ${opt.label}"
                   data-index="${idx}">
             <div class="option-content">
-              <img src="/assets/${opt.image}" alt="${opt.label}" draggable="false">
+              <img src="assets/${opt.image}" alt="${opt.label}" draggable="false">
               <span class="option-label">${opt.label}</span>
             </div>
           </button>
@@ -202,15 +202,15 @@ class SuendenbockGame {
     // Animation & Icon
     if (isCorrect) {
       btn.classList.add('correct');
-      btn.querySelector('.option-content').innerHTML += 
-        '<img src="/assets/icon_richtig.svg" class="result-icon" alt="Richtig" aria-hidden="true">';
+        btn.querySelector('.option-content').innerHTML +=
+        '<img src="assets/icon_richtig.svg" class="result-icon" alt="Richtig" aria-hidden="true">';
       this.score++;
       this.gameStats.correctAnswers++;
       this.showToast('Richtige Antwort!', 'success');
     } else {
       btn.classList.add('wrong');
-      btn.querySelector('.option-content').innerHTML += 
-        '<img src="/assets/icon_falsch.svg" class="result-icon" alt="Falsch" aria-hidden="true">';
+        btn.querySelector('.option-content').innerHTML +=
+        '<img src="assets/icon_falsch.svg" class="result-icon" alt="Falsch" aria-hidden="true">';
       this.showToast('Das war leider falsch.', 'info');
     }
     
@@ -401,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Service Worker registration
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('sw.js')
       .then(registration => {
         console.log('SW registered: ', registration);
       })
