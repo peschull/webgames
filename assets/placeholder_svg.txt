@@ -1,0 +1,18 @@
+Placeholder für SVG-Assets:
+- fig_milliardaer.svg
+- fig_klimakleber.svg  
+- fig_fluechtling.svg
+- fig_pensionistin.svg
+- fig_suendenbock.svg
+- fig_gewerkschafterin.svg
+- fig_konzernchef.svg
+- icon_falsch.svg
+- icon_richtig.svg
+- icon_fragezeichen.svg
+- icon_fakten.svg
+- frame_schlagzeile.png
+- bg_spielbrett.jpg
+- btn_antwort_*.svg
+- overlay_endscreen.svg
+
+Diese Datei kann gelöscht werden, sobald die echten Assets eingefügt sind.

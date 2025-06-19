@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Wer ist laut Schlagzeilen schuld am Stau auf der Autobahn?",
+    "options": [
+      { "label": "Klimakleber", "image": "fig_klimakleber.svg", "isCorrect": false },
+      { "label": "Milliardär", "image": "fig_milliardaer.svg", "isCorrect": false },
+      { "label": "Flüchtling", "image": "fig_fluechtling.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Staus entstehen durch systematische Probleme: Unterfinanzierung des öffentlichen Verkehrs, verfehlte Verkehrspolitik und Infrastrukturmängel. Die Suche nach Sündenböcken lenkt von echten Lösungen wie Verkehrswende und Investitionen ab."
+  },
+  {
+    "question": "Wer trägt die Verantwortung für steigende Mieten?",
+    "options": [
+      { "label": "Flüchtling", "image": "fig_fluechtling.svg", "isCorrect": false },
+      { "label": "Konzernchef", "image": "fig_konzernchef.svg", "isCorrect": false },
+      { "label": "Pensionistin", "image": "fig_pensionistin.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Mietexplosion entsteht durch: Wohnraum als Spekulationsobjekt, mangelnde Regulierung von Immobilienmärkten, fehlendes Bauland und systematische Privatisierung von Sozialwohnungen. Sündenbock-Narrative verhindern strukturelle Reformen."
+  },
+  {
+    "question": "Wer ist schuld an der Inflation?",
+    "options": [
+      { "label": "Gewerkschafterin", "image": "fig_gewerkschafterin.svg", "isCorrect": false },
+      { "label": "Milliardär", "image": "fig_milliardaer.svg", "isCorrect": false },
+      { "label": "Klimakleber", "image": "fig_klimakleber.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Inflation entsteht durch: globale Lieferketten-Krisen, Energiemarkt-Spekulation, Geldpolitik der Zentralbanken und geopolitische Konflikte. Gewerkschaften zu beschuldigen ignoriert, dass Lohnsteigerungen der Inflation meist hinterherhinken."
+  },
+  {
+    "question": "Wer ist verantwortlich für die Energiekrise?",
+    "options": [
+      { "label": "Klimakleber", "image": "fig_klimakleber.svg", "isCorrect": false },
+      { "label": "Konzernchef", "image": "fig_konzernchef.svg", "isCorrect": false },
+      { "label": "Flüchtling", "image": "fig_fluechtling.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Energiekrise entsteht durch: jahrzehntelange Abhängigkeit von autoritären Regimen, verzögerte Energiewende, Marktversagen und geopolitische Machtspiele. Klimaaktivisten als Schuldige zu benennen verschleiert politisches Versagen."
+  },
+  {
+    "question": "Wer ist schuld an der Spaltung der Gesellschaft?",
+    "options": [
+      { "label": "Gewerkschafterin", "image": "fig_gewerkschafterin.svg", "isCorrect": false },
+      { "label": "Pensionistin", "image": "fig_pensionistin.svg", "isCorrect": false },
+      { "label": "Milliardär", "image": "fig_milliardaer.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Gesellschaftliche Spaltung entsteht durch: wachsende Ungleichheit, Medien-Algorithmen, die Polarisierung fördern, und politische Strategien des 'Divide et Impera'. Sündenbock-Mechanismen verstärken die Spaltung, anstatt Brücken zu bauen."
+  },
+  {
+    "question": "Wer bedroht unsere Demokratie am meisten?",
+    "options": [
+      { "label": "Klimakleber", "image": "fig_klimakleber.svg", "isCorrect": false },
+      { "label": "Gewerkschafterin", "image": "fig_gewerkschafterin.svg", "isCorrect": false },
+      { "label": "Flüchtling", "image": "fig_fluechtling.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Demokratie wird bedroht durch: Konzentration von Medienmacht, Lobbyismus, Wahlmanipulation und systematische Desinformation. Friedliche Protestbewegungen oder Minderheiten als Bedrohung darzustellen, lenkt von echten demokratischen Defiziten ab."
+  },
+  {
+    "question": "Wer ist schuld am Pflegenotstand?",
+    "options": [
+      { "label": "Pensionistin", "image": "fig_pensionistin.svg", "isCorrect": false },
+      { "label": "Flüchtling", "image": "fig_fluechtling.svg", "isCorrect": false },
+      { "label": "Konzernchef", "image": "fig_konzernchef.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Pflegenotstand entsteht durch: Privatisierung von Krankenhäusern, Profit vor Menschlichkeit, politische Unterfinanzierung und schlechte Arbeitsbedingungen. Alte Menschen oder Migranten zu beschuldigen verschleiert systemische Missstände."
+  },
+  {
+    "question": "Wer zerstört das Klima?",
+    "options": [
+      { "label": "Pensionistin", "image": "fig_pensionistin.svg", "isCorrect": false },
+      { "label": "Gewerkschafterin", "image": "fig_gewerkschafterin.svg", "isCorrect": false },
+      { "label": "Flüchtling", "image": "fig_fluechtling.svg", "isCorrect": false },
+      { "label": "Sündenbock", "image": "fig_suendenbock.svg", "isCorrect": true }
+    ],
+    "fact": "Klimakrise entsteht durch: fossile Konzerne, die Jahrzehnte wissenschaftliche Erkenntnisse ignorierten, politische Blockade echter Klimapolitik und ein Wirtschaftssystem, das Wachstum über Nachhaltigkeit stellt. Individuelle Schuldzuweisungen verschleiern systemische Ursachen."
+  }
+]
