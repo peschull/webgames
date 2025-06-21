@@ -1,0 +1,23 @@
+{
+  "name": "finde-den-suendenbock",
+  "version": "1.0.0",
+  "description": "Satirisches Webspiel über Sündenbock-Mechanismen",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "live-server --port=3000 --open=/",
+    "build": "npm run minify",
+    "minify": "terser script.js -o script.min.js && cleancss style.css -o style.min.css",
+    "test": "jest",
+    "lighthouse": "lighthouse http://localhost:8000 --output html --output-path=./lighthouse-report.html"
+  },
+  "keywords": ["game", "political", "education", "accessibility", "pwa"],
+  "author": "Aktivismus-Team",
+  "license": "MIT",
+  "devDependencies": {
+    "terser": "^5.0.0",
+    "clean-css-cli": "^5.0.0",
+    "lighthouse": "^10.0.0",
+    "jest": "^29.0.0"
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finde den Sündenbock – Satirisches Webspiel</title>
+  <meta name="description" content="Entlarve politische Sündenbock-Mechanismen in diesem satirischen, barrierefreien Webspiel.">
+  <meta name="keywords" content="Sündenbock, Politik, Satire, Bildung, Webspiel">
+  <meta name="author" content="Aktivismus-Team">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#b80000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Sündenbock">
+  
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/fig_suendenbock.svg">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Finde den Sündenbock">
+  <meta property="og:description" content="Satirisches Webspiel über politische Sündenbock-Mechanismen">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/og-image.png">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="questions.json" as="fetch" crossorigin>
+  <link rel="preload" href="/assets/fig_suendenbock.svg" as="image">
+</head>
+<body>
+  <main id="game-container">
+    <header>
+      <h1>Finde den Sündenbock</h1>
+      <p class="subtitle">Ein satirisches Spiel über politische Schuldzuweisungen</p>
+      <div id="progress-container">
+        <div id="progress-bar" role="progressbar" aria-label="Spielfortschritt" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        <span id="progress-text" aria-live="polite">Frage <span id="current-question">0</span> von <span id="total-questions">5</span></span>
+      </div>
+    </header>
+    
+    <section id="question-section" aria-live="polite">
+      <!-- Frage und Antwortoptionen werden hier per JS eingefügt -->
+    </section>
+    
+    <section id="fact-section" hidden>
+      <div class="fact-header">
+        <img src="/assets/icon_fakten.svg" alt="" class="fact-icon" aria-hidden="true" />
+        <h2>Die Wahrheit</h2>
+      </div>
+      <p id="fact-text"></p>
+      <div class="navigation-buttons">
+        <button id="next-btn" class="primary-btn">
+          <span>Weiter</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+    
+    <section id="endscreen" hidden>
+      <div class="endscreen-content">
+        <h2>Dein Ergebnis</h2>
+        <div id="score-display">
+          <div id="score-circle">
+            <span id="score-number">0</span>
+            <span id="score-total">/5</span>
+          </div>
+        </div>
+        <p id="score-text"></p>
+        <p id="score-message"></p>
+        <div class="navigation-buttons">
+          <button id="restart-btn" class="primary-btn">Nochmal spielen</button>
+          <button id="share-btn" class="secondary-btn">Teilen</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Loading Indicator -->
+    <div id="loading" hidden>
+      <div class="spinner" aria-label="Lädt..."></div>
+    </div>
+    
+    <!-- Toast Notifications -->
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+  </main>
+  <script src="script_simple.js"></script>
+</body>
+</html>
