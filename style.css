@@ -17,6 +17,11 @@
   box-sizing: border-box;
 }
 
+/* Ensure hidden attribute always works */
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   padding: 0;
