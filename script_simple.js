@@ -20,6 +20,12 @@ console.log('Spiel wird initialisiert...');
 function updateProgress() {
   const percent = (currentQuestion / questions.length) * 100;
   progressBar.innerHTML = `<div style="width:${percent}%"></div>`;
+  
+  // Update progress text
+  const currentQuestionEl = document.getElementById('current-question');
+  if (currentQuestionEl) {
+    currentQuestionEl.textContent = currentQuestion;
+  }
 }
 
 // Frage anzeigen
@@ -122,6 +128,13 @@ fetch('./questions.json')
     console.log('Fragen geladen:', data.length);
     questions = data;
     score = parseInt(localStorage.getItem('suendenbock_score')) || 0;
+    
+    // Update total questions display
+    const totalQuestionsEl = document.getElementById('total-questions');
+    if (totalQuestionsEl) {
+      totalQuestionsEl.textContent = questions.length;
+    }
+    
     showQuestion();
   })
   .catch(error => {

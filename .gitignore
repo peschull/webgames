@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build outputs
+*.min.js
+*.min.css
+dist/
+build/
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lighthouse reports
+lighthouse-report.html
+*.lighthouse.html
+
+# Temporary files
+*.tmp
+*.log
+.cache/
+
+# PWA
+sw.js.map

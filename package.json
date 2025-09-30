@@ -1,6 +1,6 @@
 {
   "name": "finde-den-suendenbock",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Satirisches Webspiel über Sündenbock-Mechanismen",
   "main": "index.html",
   "scripts": {
