@@ -54,6 +54,7 @@ API Docs:      SpringDoc OpenAPI
 ### Prerequisites
 - Java 17 or higher
 - Maven 3.6 or higher
+- (Optional) Docker & Docker Compose
 - (Optional) PostgreSQL for production
 
 ### Run with Maven
@@ -62,6 +63,26 @@ API Docs:      SpringDoc OpenAPI
 cd backend
 mvn spring-boot:run
 ```
+
+### Run with Script
+
+```bash
+cd backend
+./start.sh
+```
+
+### Run with Docker Compose
+
+```bash
+cd backend
+docker-compose up -d
+```
+
+This will start:
+- PostgreSQL database on port 5432
+- Backend API on port 8080
+- Prometheus on port 9090
+- Grafana on port 3001
 
 ### Build
 
@@ -74,9 +95,17 @@ java -jar target/suendenbock-backend-1.0.0.jar
 
 ### Environment Variables
 
+Create a `.env` file from the example:
+
+```bash
+cp .env.example .env
+```
+
+Then configure:
+
 ```bash
 # JWT Secret (generate a secure random string)
-JWT_SECRET=your-secret-key-here
+JWT_SECRET=your-base64-encoded-secret-key
 
 # Database (for production)
 SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/suendenbock
@@ -86,6 +115,16 @@ SPRING_DATASOURCE_PASSWORD=postgres
 # Email Configuration
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
+
+# CORS (add your frontend URLs)
+CORS_ALLOWED_ORIGINS=http://localhost:3000,https://yourdomain.com
+```
+
+### Generate JWT Secret
+
+```bash
+# Generate a random base64-encoded secret
+echo -n "$(openssl rand -hex 32)" | base64
 ```
 
 ### Application Properties
@@ -223,18 +262,43 @@ Counter.builder("custom.metric")
 
 ### Docker
 
-```dockerfile
-FROM eclipse-temurin:17-jre
-COPY target/suendenbock-backend-1.0.0.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
-```
-
-Build and run:
+Build and run with Docker:
 
 ```bash
+# Build the image
 docker build -t suendenbock-backend .
-docker run -p 8080:8080 suendenbock-backend
+
+# Run the container
+docker run -p 8080:8080 \
+  -e JWT_SECRET=your-secret \
+  -e SPRING_DATASOURCE_URL=jdbc:postgresql://host:5432/suendenbock \
+  -e SPRING_DATASOURCE_USERNAME=postgres \
+  -e SPRING_DATASOURCE_PASSWORD=postgres \
+  suendenbock-backend
 ```
+
+### Docker Compose
+
+Full stack with database and monitoring:
+
+```bash
+# Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f backend
+
+# Stop all services
+docker-compose down
+
+# Stop and remove volumes
+docker-compose down -v
+```
+
+Services:
+- Backend: http://localhost:8080
+- Prometheus: http://localhost:9090
+- Grafana: http://localhost:3001 (admin/admin)
 
 ### Kubernetes
 
