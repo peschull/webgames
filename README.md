@@ -46,12 +46,24 @@ Jede Frage zeigt typische Schuldzuweisungen aus Politik und Medien. Die richtige
 
 ## �️ **Tech Stack**
 
+### **Frontend**
 ```
 Frontend:     Vanilla JavaScript (ES6+), CSS3, HTML5
 PWA:          Service Worker, Web App Manifest
 Storage:      localStorage (privacy-first)
 Icons:        Custom SVGs, no external dependencies
 Deployment:   Static hosting (GitHub Pages, Netlify)
+```
+
+### **Backend** (Optional)
+```
+Framework:    Spring Boot 3.2.0
+Language:     Java 17
+Database:     H2 (dev), PostgreSQL (prod)
+Security:     Spring Security + JWT
+Cache:        Spring Cache + Caffeine
+Monitoring:   Micrometer + Prometheus
+Rate Limit:   Spring AOP + Bucket4j
 ```
 
 ---
@@ -92,10 +104,15 @@ docker run -p 8080:80 -v $(pwd):/usr/share/nginx/html nginx
 ├── 📱 manifest.json           # PWA Manifest
 ├── 🔧 sw.js                   # Service Worker
 ├── 📦 package.json            # Build Scripts
-└── 📂 assets/                 # SVG Icons
-    ├── 🎭 fig_*.svg           # Charakter-Icons
-    ├── ✅ icon_*.svg           # UI-Icons  
-    └── 📝 placeholder*.txt     # Asset-Dokumentation
+├── 📂 assets/                 # SVG Icons
+│   ├── 🎭 fig_*.svg           # Charakter-Icons
+│   ├── ✅ icon_*.svg           # UI-Icons  
+│   └── 📝 placeholder*.txt     # Asset-Dokumentation
+└── 📂 backend/                # Spring Boot Backend (Optional)
+    ├── 📄 pom.xml             # Maven Dependencies
+    ├── 📂 src/main/java       # Backend Source Code
+    ├── 📂 src/test/java       # Integration Tests
+    └── 📝 README.md           # Backend Documentation
 ```
 
 ---
@@ -328,6 +345,40 @@ Gegen Vereinfachung, für Komplexität 🧠
 - 👥 **Multiplayer-Modus** (Diskussion fördern)
 - 📚 **Lernpfade** (thematische Vertiefung)
 - 🎮 **Gamification** (Badges, Achievements)
+
+---
+
+## 🔧 **Backend Setup** (Optional)
+
+The backend provides additional features like user authentication, game statistics tracking, and leaderboards.
+
+### **Prerequisites**
+- Java 17 or higher
+- Maven 3.6 or higher
+
+### **Quick Start**
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+### **Features Included**
+- ✅ **JWT Authentication** with refresh token rotation
+- ✅ **Rate Limiting** with Spring AOP
+- ✅ **Caching** with Spring Cache + Caffeine
+- ✅ **Observability** with Micrometer/Prometheus
+- ✅ **Health Checks** with Spring Actuator
+- ✅ **Email Verification** flow
+- ✅ **Admin Endpoints** for user management
+- ✅ **API Documentation** with Swagger/OpenAPI
+
+### **Access Points**
+- **API**: http://localhost:8080/api
+- **Swagger UI**: http://localhost:8080/swagger-ui.html
+- **Actuator Health**: http://localhost:8080/actuator/health
+- **Prometheus Metrics**: http://localhost:8080/actuator/prometheus
+
+See [backend/README.md](backend/README.md) for detailed documentation.
 
 ---
 
